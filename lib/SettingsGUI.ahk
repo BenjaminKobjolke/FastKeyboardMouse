@@ -122,6 +122,19 @@ ShowSettings:
 	Gui, Settings:Add, Edit, x270 y%editY% w60 vEditScrollDown ReadOnly, %ScrollDown%
 	Gui, Settings:Add, Button, x335 y%btnY% w45 gSetScrollDown, Set
 
+	; --- Navigation Keys ---
+	yPos += 45
+	Gui, Settings:Add, Text, x20 y%yPos% w480 0x10  ; horizontal line
+	yPos += 10
+	Gui, Settings:Add, Text, x20 y%yPos%, Navigation Keys
+
+	yPos += 30
+	Gui, Settings:Add, Text, x20 y%yPos% w60, Center:
+	editY := yPos - 3
+	btnY := yPos - 4
+	Gui, Settings:Add, Edit, x80 y%editY% w60 vEditCenterCursor ReadOnly, %CenterCursor%
+	Gui, Settings:Add, Button, x145 y%btnY% w45 gSetCenterCursor, Set
+
 	; --- Speed Modifier ---
 	yPos += 45
 	Gui, Settings:Add, Text, x20 y%yPos% w480 0x10  ; horizontal line
@@ -235,6 +248,10 @@ SetScrollDown:
 	CaptureKeyToControl("Settings", "EditScrollDown")
 return
 
+SetCenterCursor:
+	CaptureKeyToControl("Settings", "EditCenterCursor")
+return
+
 ; ==================== Theme Preview ====================
 
 ThemePreview:
@@ -280,6 +297,7 @@ SaveSettings:
 	MiddleClick := EditMiddleClick
 	ScrollUp := EditScrollUp
 	ScrollDown := EditScrollDown
+	CenterCursor := EditCenterCursor
 	SpeedModifier := DDLSpeedModifier
 
 	BaseSpeed := SliderBaseSpeed

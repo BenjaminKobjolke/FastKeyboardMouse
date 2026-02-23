@@ -27,6 +27,7 @@ global RightClick := "d"
 global MiddleClick := "s"
 global ScrollUp := "i"
 global ScrollDown := "u"
+global CenterCursor := "q"
 global SpeedModifier := "Shift"
 
 ; Runtime state
@@ -88,6 +89,8 @@ InitConfig() {
 	ScrollUp := tmp
 	IniRead, tmp, %IniFile%, Keys, ScrollDown, u
 	ScrollDown := tmp
+	IniRead, tmp, %IniFile%, Keys, CenterCursor, q
+	CenterCursor := tmp
 	IniRead, tmp, %IniFile%, Keys, SpeedModifier, Shift
 	SpeedModifier := tmp
 
@@ -142,6 +145,7 @@ SaveConfig() {
 	IniWrite, %MiddleClick%, %IniFile%, Keys, MiddleClick
 	IniWrite, %ScrollUp%, %IniFile%, Keys, ScrollUp
 	IniWrite, %ScrollDown%, %IniFile%, Keys, ScrollDown
+	IniWrite, %CenterCursor%, %IniFile%, Keys, CenterCursor
 	IniWrite, %SpeedModifier%, %IniFile%, Keys, SpeedModifier
 }
 
@@ -202,6 +206,11 @@ RegisterControllerHotkeys() {
 
 	hk := "*" . ScrollDown
 	Hotkey, %hk%, ScrollDownAction, On
+	RegisteredHotkeys.Push(hk)
+
+	; Center cursor key
+	hk := "*" . CenterCursor
+	Hotkey, %hk%, CenterCursorAction, On
 	RegisteredHotkeys.Push(hk)
 }
 

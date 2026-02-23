@@ -154,6 +154,19 @@ ScrollDownAction:
 	MouseClick, WheelDown,,, 3
 return
 
+; ==================== Center Cursor Handler ====================
+
+CenterCursorAction:
+	WinGetPos, winX, winY, winW, winH, A
+	if (winW > 0 && winH > 0)
+	{
+		centerX := Round(winX + winW / 2)
+		centerY := Round(winY + winH / 2)
+		CoordMode, Mouse, Screen
+		MouseMove, %centerX%, %centerY%, 0
+	}
+return
+
 ; ==================== Key Suppression ====================
 
 SuppressKey:
