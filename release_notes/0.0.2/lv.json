@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Jauns: ar tastatūru vadāma pele ar vim stila kustību, izmantojot HJKL",
+    "Jauns: kreisā/labā/vidējā klikšķa un vilkšanas atbalsts, izmantojot A/D/S taustiņus",
+    "Jauns: dubultpieskāriena noteikšana dubultklikšķim",
+    "Jauns: ritināšana uz augšu/leju, izmantojot I/U taustiņus",
+    "Jauns: vizuāls zaļš punkta indikators, kas aktīvā režīmā seko kursoram",
+    "Jauns: iestatījumu GUI ar cilnēm Taustiņi, Ātrums un Tēma",
+    "Jauns: tumšās un gaišās tēmas atbalsts",
+    "Jauns: visi taustiņi ir pilnībā konfigurējami"
+  ]
+}

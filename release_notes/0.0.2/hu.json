@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Új: Billentyűzettel vezérelt egér vim-stílusú HJKL mozgással",
+    "Új: Bal/jobb/középső kattintás és húzás támogatása az A/D/S billentyűkkel",
+    "Új: Dupla koppintás érzékelése a dupla kattintáshoz",
+    "Új: Görgetés fel/le az I/U billentyűkkel",
+    "Új: Aktív állapotban a kurzort követő zöld vizuális pont jelző",
+    "Új: Beállítások GUI a Billentyűk, Sebesség és Téma lapokkal",
+    "Új: Sötét és világos téma támogatása",
+    "Új: Minden billentyű teljes mértékben konfigurálható"
+  ]
+}

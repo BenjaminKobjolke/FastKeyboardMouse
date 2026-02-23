@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nowość: Mysz sterowana klawiaturą z ruchem w stylu vim za pomocą HJKL",
+    "Nowość: Obsługa kliknięcia lewym/prawym/środkowym oraz przeciągania za pomocą klawiszy A/D/S",
+    "Nowość: Wykrywanie podwójnego stuknięcia dla dwukliku",
+    "Nowość: Przewijanie w górę/dół za pomocą klawiszy I/U",
+    "Nowość: Wizualny wskaźnik w postaci zielonej kropki podąża za kursorem, gdy funkcja jest aktywna",
+    "Nowość: GUI ustawień z zakładkami Klawisze, Szybkość i Motyw",
+    "Nowość: Obsługa motywu ciemnego i jasnego",
+    "Nowość: Pełna konfiguracja wszystkich klawiszy"
+  ]
+}

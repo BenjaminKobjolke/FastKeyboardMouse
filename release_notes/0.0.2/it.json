@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Novità: Mouse controllato da tastiera con movimento in stile vim tramite HJKL",
+    "Novità: Supporto per clic sinistro/destro/centrale e trascinamento tramite i tasti A/D/S",
+    "Novità: Rilevamento del doppio tocco per il doppio clic",
+    "Novità: Scorrimento su/giù tramite i tasti I/U",
+    "Novità: Indicatore visivo a punto verde che segue il cursore quando attivo",
+    "Novità: GUI delle impostazioni con schede Tasti, Velocità e Tema",
+    "Novità: Supporto per tema scuro e chiaro",
+    "Novità: Tutti i tasti sono completamente configurabili"
+  ]
+}

@@ -1,0 +1,1 @@
+start FastKeyboardMouse.ahk --gui

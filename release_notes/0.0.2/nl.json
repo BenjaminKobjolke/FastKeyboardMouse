@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nieuw: Muisbesturing via toetsenbord met vim-stijl HJKL-beweging",
+    "Nieuw: Ondersteuning voor links-/rechts-/middelklik en slepen via A/D/S-toetsen",
+    "Nieuw: Detectie van dubbeltik voor dubbelklik",
+    "Nieuw: Omhoog/omlaag scrollen via I/U-toetsen",
+    "Nieuw: Visuele groene puntindicator volgt de cursor wanneer actief",
+    "Nieuw: Instellingen-GUI met tabbladen Toetsen, Snelheid en Thema",
+    "Nieuw: Ondersteuning voor donker en licht thema",
+    "Nieuw: Alle toetsen volledig configureerbaar"
+  ]
+}

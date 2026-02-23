@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nyhed: Tastaturstyret mus med vim-lignende HJKL-bevægelse",
+    "Nyhed: Understøttelse af venstre/højre/midterklik og træk via A/D/S-taster",
+    "Nyhed: Registrering af dobbelttryk til dobbeltklik",
+    "Nyhed: Rul op/ned via I/U-taster",
+    "Nyhed: Visuel grøn prik-indikator følger markøren, når den er aktiv",
+    "Nyhed: Indstillings-GUI med fanerne Taster, Hastighed og Tema",
+    "Nyhed: Understøttelse af mørkt og lyst tema",
+    "Nyhed: Alle taster kan konfigureres fuldt ud"
+  ]
+}

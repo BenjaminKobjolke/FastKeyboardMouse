@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nuevo: Ratón controlado por teclado con movimiento HJKL estilo vim",
+    "Nuevo: Compatibilidad con clic izquierdo/derecho/central y arrastrar mediante las teclas A/D/S",
+    "Nuevo: Detección de doble pulsación para doble clic",
+    "Nuevo: Desplazamiento arriba/abajo mediante las teclas I/U",
+    "Nuevo: Un indicador visual de punto verde sigue al cursor cuando está activo",
+    "Nuevo: Interfaz gráfica de configuración con pestañas Teclas, Velocidad y Tema",
+    "Nuevo: Compatibilidad con temas oscuro y claro",
+    "Nuevo: Todas las teclas son totalmente configurables"
+  ]
+}

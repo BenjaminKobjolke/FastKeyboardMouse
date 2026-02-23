@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nově: Ovládání myši klávesnicí s pohybem HJKL ve stylu vim",
+    "Nově: Podpora kliknutí levým/pravým/prostředním tlačítkem a tažení pomocí kláves A/D/S",
+    "Nově: Detekce dvojitého klepnutí pro dvojklik",
+    "Nově: Posouvání nahoru/dolů pomocí kláves I/U",
+    "Nově: Vizuální indikátor v podobě zelené tečky sleduje kurzor při aktivaci",
+    "Nově: GUI nastavení se záložkami Klávesy, Rychlost a Motiv",
+    "Nově: Podpora tmavého a světlého motivu",
+    "Nově: Všechny klávesy jsou plně konfigurovatelné"
+  ]
+}

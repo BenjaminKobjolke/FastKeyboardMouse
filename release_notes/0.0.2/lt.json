@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nauja: klaviatūra valdomas pelės žymeklis su vim stiliaus judėjimu HJKL",
+    "Nauja: kairiojo / dešiniojo / viduriniojo mygtuko spustelėjimo ir vilkimo palaikymas naudojant A/D/S klavišus",
+    "Nauja: dvigubo bakstelėjimo aptikimas dvigubam spustelėjimui",
+    "Nauja: slinkimas aukštyn / žemyn naudojant I/U klavišus",
+    "Nauja: aktyvavus vizualus žalias taško indikatorius seka žymeklį",
+    "Nauja: nustatymų GUI su skirtukais „Klavišai“, „Greitis“ ir „Tema“",
+    "Nauja: tamsios ir šviesios temos palaikymas",
+    "Nauja: visi klavišai pilnai konfigūruojami"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Novo: Miš kontrolisan tastaturom sa vim-stilom kretanja HJKL",
+    "Novo: Podrška za levi/desni/srednji klik i prevlačenje putem tastera A/D/S",
+    "Novo: Detekcija dvostrukog dodira za dvoklik",
+    "Novo: Skrolovanje nagore/nadole putem tastera I/U",
+    "Novo: Vizuelni indikator u vidu zelene tačke prati kursor kada je aktivno",
+    "Novo: GUI za podešavanja sa karticama Tasteri, Brzina i Tema",
+    "Novo: Podrška za tamnu i svetlu temu",
+    "Novo: Svi tasteri su u potpunosti konfigurisani"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "version": "0.0.2",
+    "date": "2026-02-23",
+    "notes": [
+        "New: Keyboard-controlled mouse with vim-style HJKL movement",
+        "New: Left/right/middle click and drag support via A/D/S keys",
+        "New: Double-tap detection for double-click",
+        "New: Scroll up/down via I/U keys",
+        "New: Visual green dot indicator follows cursor when active",
+        "New: Settings GUI with Keys, Speed, and Theme tabs",
+        "New: Dark and light theme support",
+        "New: All keys fully configurable"
+    ]
+}

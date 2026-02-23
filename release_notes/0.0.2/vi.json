@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Mới: Chuột điều khiển bằng bàn phím với di chuyển kiểu vim bằng HJKL",
+    "Mới: Hỗ trợ nhấp trái/phải/giữa và kéo thả qua các phím A/D/S",
+    "Mới: Phát hiện chạm hai lần để nhấp đúp",
+    "Mới: Cuộn lên/xuống qua các phím I/U",
+    "Mới: Chỉ báo chấm xanh lá trực quan theo con trỏ khi đang hoạt động",
+    "Mới: GUI cài đặt với các tab Phím, Tốc độ và Giao diện",
+    "Mới: Hỗ trợ giao diện tối và sáng",
+    "Mới: Tất cả các phím đều có thể cấu hình đầy đủ"
+  ]
+}

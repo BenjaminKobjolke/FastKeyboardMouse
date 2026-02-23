@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nouveau : Souris contrôlée au clavier avec déplacement HJKL façon vim",
+    "Nouveau : Prise en charge du clic gauche/droit/milieu et du glisser-déposer via les touches A/D/S",
+    "Nouveau : Détection du double-tap pour le double-clic",
+    "Nouveau : Défilement vers le haut/bas via les touches I/U",
+    "Nouveau : Indicateur visuel en point vert qui suit le curseur lorsqu’il est actif",
+    "Nouveau : Interface de paramètres avec onglets Touches, Vitesse et Thème",
+    "Nouveau : Prise en charge des thèmes sombre et clair",
+    "Nouveau : Toutes les touches sont entièrement configurables"
+  ]
+}

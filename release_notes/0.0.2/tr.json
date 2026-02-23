@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Yeni: Vim tarzı HJKL hareketiyle klavyeden kontrol edilen fare",
+    "Yeni: A/D/S tuşlarıyla sol/sağ/orta tıklama ve sürükleme desteği",
+    "Yeni: Çift tıklama için çift dokunuş algılama",
+    "Yeni: I/U tuşlarıyla yukarı/aşağı kaydırma",
+    "Yeni: Etkinken imleci takip eden görsel yeşil nokta göstergesi",
+    "Yeni: Tuşlar, Hız ve Tema sekmelerine sahip Ayarlar arayüzü",
+    "Yeni: Koyu ve açık tema desteği",
+    "Yeni: Tüm tuşlar tamamen yapılandırılabilir"
+  ]
+}

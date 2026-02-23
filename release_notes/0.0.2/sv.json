@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nyhet: Tangentbordsstyrd mus med vim-liknande HJKL-rörelser",
+    "Nyhet: Stöd för vänster-/höger-/mittenklick och dra via A/D/S-tangenterna",
+    "Nyhet: Identifiering av dubbeltryck för dubbelklick",
+    "Nyhet: Skrolla upp/ned via I/U-tangenterna",
+    "Nyhet: Visuell grön punktindikator följer markören när den är aktiv",
+    "Nyhet: Inställnings-GUI med flikarna Tangenter, Hastighet och Tema",
+    "Nyhet: Stöd för mörkt och ljust tema",
+    "Nyhet: Alla tangenter är fullt konfigurerbara"
+  ]
+}

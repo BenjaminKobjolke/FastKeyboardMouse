@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Uus: klaviatuuriga juhitav hiir vim-stiilis HJKL-liikumisega",
+    "Uus: vasaku/parema/keskmise klõpsu ja lohistamise tugi A/D/S-klahvide kaudu",
+    "Uus: topeltpuudutuse tuvastus topeltklõpsu jaoks",
+    "Uus: üles/alla kerimine I/U-klahvidega",
+    "Uus: aktiivsuse korral järgib kursorit visuaalne roheline täpiindikaator",
+    "Uus: seadete GUI vahekaartidega Klahvid, Kiirus ja Teema",
+    "Uus: tumeda ja heleda teema tugi",
+    "Uus: kõik klahvid on täielikult seadistatavad"
+  ]
+}

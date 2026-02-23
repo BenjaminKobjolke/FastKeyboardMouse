@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Novo: Rato controlado pelo teclado com movimento HJKL ao estilo vim",
+    "Novo: Suporte para clique esquerdo/direito/do meio e arrastar através das teclas A/D/S",
+    "Novo: Deteção de duplo toque para duplo clique",
+    "Novo: Deslocamento para cima/baixo através das teclas I/U",
+    "Novo: Indicador visual de ponto verde segue o cursor quando ativo",
+    "Novo: Interface gráfica de definições com separadores Teclas, Velocidade e Tema",
+    "Novo: Suporte para tema escuro e claro",
+    "Novo: Todas as teclas totalmente configuráveis"
+  ]
+}

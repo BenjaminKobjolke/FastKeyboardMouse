@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Novo: Miška, upravljana s tipkovnico, z gibanjem v slogu vim (HJKL)",
+    "Novo: Podpora za levi/desni/srednji klik in vlečenje prek tipk A/D/S",
+    "Novo: Zaznavanje dvojnega dotika za dvojni klik",
+    "Novo: Drsenje navzgor/navzdol prek tipk I/U",
+    "Novo: Vizualni indikator v obliki zelene pike sledi kazalcu, ko je aktiven",
+    "Novo: Grafični vmesnik nastavitev z zavihki Tipke, Hitrost in Tema",
+    "Novo: Podpora za temno in svetlo temo",
+    "Novo: Vse tipke so v celoti nastavljive"
+  ]
+}

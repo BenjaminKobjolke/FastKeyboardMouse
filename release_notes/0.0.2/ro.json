@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Nou: Mouse controlat din tastatură cu mișcare HJKL în stil vim",
+    "Nou: Suport pentru clic stânga/dreapta/mijloc și tragere prin tastele A/D/S",
+    "Nou: Detectare a atingerii duble pentru dublu-clic",
+    "Nou: Derulare în sus/jos prin tastele I/U",
+    "Nou: Indicator vizual cu punct verde care urmărește cursorul când este activ",
+    "Nou: Interfață grafică de setări cu filele Taste, Viteză și Temă",
+    "Nou: Suport pentru teme întunecate și deschise",
+    "Nou: Toate tastele sunt complet configurabile"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Neu: Tastaturgesteuerte Maus mit vim-typischer HJKL-Bewegung",
+    "Neu: Linksklick/Rechtsklick/Mittelklick sowie Ziehen per A/D/S-Tasten",
+    "Neu: Erkennung von Doppeltippen für Doppelklicks",
+    "Neu: Nach oben/unten scrollen per I/U-Tasten",
+    "Neu: Visueller grüner Punktindikator folgt dem Cursor, wenn aktiv",
+    "Neu: Einstellungs-GUI mit den Tabs „Tasten“, „Geschwindigkeit“ und „Design“",
+    "Neu: Unterstützung für dunkles und helles Design",
+    "Neu: Alle Tasten vollständig konfigurierbar"
+  ]
+}

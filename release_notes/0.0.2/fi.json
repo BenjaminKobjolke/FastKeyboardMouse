@@ -1,0 +1,14 @@
+{
+  "version": "0.0.2",
+  "date": "2026-02-23",
+  "notes": [
+    "Uutta: Näppäimistöohjattu hiiri vim-tyylisellä HJKL-liikkeellä",
+    "Uutta: Vasen/oikea/keskiklikkaus ja vedon tuki A/D/S-näppäimillä",
+    "Uutta: Kaksoisnapautuksen tunnistus kaksoisnapsautusta varten",
+    "Uutta: Vieritys ylös/alas I/U-näppäimillä",
+    "Uutta: Vihreä visuaalinen pisteilmaisin seuraa osoitinta, kun toiminto on aktiivinen",
+    "Uutta: Asetusten graafinen käyttöliittymä Näppäimet-, Nopeus- ja Teema-välilehdillä",
+    "Uutta: Tumma ja vaalea teema",
+    "Uutta: Kaikki näppäimet ovat täysin muokattavissa"
+  ]
+}
