@@ -22,6 +22,9 @@ CreateIndicator() {
 
 ShowIndicator() {
 	global TimerInterval
+	; Recreate indicator to ensure fresh window handle and AlwaysOnTop z-order
+	Gui, Indicator:Destroy
+	CreateIndicator()
 	Gui, Indicator:Show, NoActivate
 	SetTimer, UpdateIndicatorPosition, %TimerInterval%
 }
