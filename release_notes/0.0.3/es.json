@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Nuevo: Centra el cursor en la ventana activa con una sola pulsación de tecla",
+    "Corregido: El punto indicador a veces aparece detrás de otras ventanas"
+  ]
+}

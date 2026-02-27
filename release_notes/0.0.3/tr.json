@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Yeni: Tek bir tuş basışıyla aktif pencerede imleci ortala",
+    "Düzeltildi: Gösterge noktası bazen diğer pencerelerin arkasında görünüyor"
+  ]
+}

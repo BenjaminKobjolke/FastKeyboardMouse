@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Novo: Centrar o cursor na janela ativa com uma única tecla",
+    "Corrigido: O ponto indicador por vezes aparece atrás de outras janelas"
+  ]
+}

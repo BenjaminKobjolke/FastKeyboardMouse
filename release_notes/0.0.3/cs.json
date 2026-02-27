@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Novinka: Vycentrování kurzoru na aktivní okno jediným stiskem klávesy",
+    "Oprava: Indikační tečka se někdy zobrazovala za jinými okny"
+  ]
+}

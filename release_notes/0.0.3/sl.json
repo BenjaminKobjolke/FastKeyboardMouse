@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Novo: Središči kazalec na aktivnem oknu z enim pritiskom tipke",
+    "Popravljeno: Indikatorska pika se je včasih prikazala za drugimi okni"
+  ]
+}

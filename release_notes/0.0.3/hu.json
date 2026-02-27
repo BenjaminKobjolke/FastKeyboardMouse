@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Új: A kurzor középre igazítása az aktív ablakban egyetlen billentyűlenyomással",
+    "Javítva: Az indikátorpont néha más ablakok mögött jelent meg"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Novo: Centrirajte pokazivač na aktivnom prozoru jednim pritiskom tipke",
+    "Ispravljeno: Točkasti indikator ponekad se prikazivao iza drugih prozora"
+  ]
+}

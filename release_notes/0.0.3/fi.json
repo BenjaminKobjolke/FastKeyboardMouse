@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Uutta: Kohdista kohdistin aktiivisen ikkunan keskelle yhdellä näppäinpainalluksella",
+    "Korjattu: Ilmaisimen piste näkyi joskus muiden ikkunoiden takana"
+  ]
+}

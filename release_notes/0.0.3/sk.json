@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Nové: Vycentrovanie kurzora na aktívnom okne jedným stlačením klávesu",
+    "Opravené: Indikačná bodka sa niekedy zobrazovala za inými oknami"
+  ]
+}

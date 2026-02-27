@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Nouveau : Centrer le curseur sur la fenêtre active avec une seule pression de touche",
+    "Corrigé : Le point indicateur apparaissait parfois derrière d’autres fenêtres"
+  ]
+}

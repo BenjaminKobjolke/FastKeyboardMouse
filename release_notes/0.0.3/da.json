@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Nyt: Centrér markøren i det aktive vindue med et enkelt tastetryk",
+    "Rettet: Indikatorprik vises nogle gange bag andre vinduer"
+  ]
+}

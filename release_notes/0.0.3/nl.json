@@ -1,0 +1,8 @@
+{
+  "version": "0.0.3",
+  "date": "2026-02-27",
+  "notes": [
+    "Nieuw: Cursor centreren op het actieve venster met één enkele toetsaanslag",
+    "Opgelost: Indicatiestip verschijnt soms achter andere vensters"
+  ]
+}
