@@ -29,7 +29,7 @@ ShowSettings:
 		Gui, Settings:Font, s12 cBlack
 	}
 
-	Gui, Settings:Add, Tab3, x10 y10 w520 h510 vSettingsTab, Keys|Speed|Theme
+	Gui, Settings:Add, Tab3, x10 y10 w520 h545 vSettingsTab, Keys|Speed|Theme
 
 	; ==================== Keys Tab ====================
 	Gui, Settings:Tab, Keys
@@ -110,7 +110,7 @@ ShowSettings:
 	yPos += 45
 	Gui, Settings:Add, Text, x20 y%yPos% w480 0x10  ; horizontal line
 	yPos += 10
-	Gui, Settings:Add, Text, x20 y%yPos%, Scroll Keys
+	Gui, Settings:Add, Text, x20 y%yPos%, Scroll / Zoom Keys
 
 	yPos += 30
 	Gui, Settings:Add, Text, x20 y%yPos% w60, Up:
@@ -121,6 +121,16 @@ ShowSettings:
 	Gui, Settings:Add, Text, x210 y%yPos% w60, Down:
 	Gui, Settings:Add, Edit, x270 y%editY% w60 vEditScrollDown ReadOnly, %ScrollDown%
 	Gui, Settings:Add, Button, x335 y%btnY% w45 gSetScrollDown, Set
+
+	yPos += 35
+	Gui, Settings:Add, Text, x20 y%yPos% w60, Zoom In:
+	editY := yPos - 3
+	btnY := yPos - 4
+	Gui, Settings:Add, Edit, x80 y%editY% w60 vEditZoomIn ReadOnly, %ZoomIn%
+	Gui, Settings:Add, Button, x145 y%btnY% w45 gSetZoomIn, Set
+	Gui, Settings:Add, Text, x210 y%yPos% w60, Zoom Out:
+	Gui, Settings:Add, Edit, x270 y%editY% w60 vEditZoomOut ReadOnly, %ZoomOut%
+	Gui, Settings:Add, Button, x335 y%btnY% w45 gSetZoomOut, Set
 
 	; --- Navigation Keys ---
 	yPos += 45
@@ -192,10 +202,10 @@ ShowSettings:
 
 	; ==================== Bottom buttons (outside tabs) ====================
 	Gui, Settings:Tab
-	Gui, Settings:Add, Button, x350 y530 w90 gSaveSettings Default, Save
-	Gui, Settings:Add, Button, x450 y530 w90 gSettingsGuiClose, Cancel
+	Gui, Settings:Add, Button, x350 y565 w90 gSaveSettings Default, Save
+	Gui, Settings:Add, Button, x450 y565 w90 gSettingsGuiClose, Cancel
 
-	Gui, Settings:Show, w550 h560
+	Gui, Settings:Show, w550 h595
 
 	; Apply dark mode to window after showing
 	if (DarkMode = 1)
@@ -248,6 +258,14 @@ SetScrollDown:
 	CaptureKeyToControl("Settings", "EditScrollDown")
 return
 
+SetZoomIn:
+	CaptureKeyToControl("Settings", "EditZoomIn")
+return
+
+SetZoomOut:
+	CaptureKeyToControl("Settings", "EditZoomOut")
+return
+
 SetCenterCursor:
 	CaptureKeyToControl("Settings", "EditCenterCursor")
 return
@@ -297,6 +315,8 @@ SaveSettings:
 	MiddleClick := EditMiddleClick
 	ScrollUp := EditScrollUp
 	ScrollDown := EditScrollDown
+	ZoomIn := EditZoomIn
+	ZoomOut := EditZoomOut
 	CenterCursor := EditCenterCursor
 	SpeedModifier := DDLSpeedModifier
 

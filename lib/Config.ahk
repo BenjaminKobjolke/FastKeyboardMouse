@@ -27,6 +27,8 @@ global RightClick := "d"
 global MiddleClick := "s"
 global ScrollUp := "i"
 global ScrollDown := "u"
+global ZoomIn := "o"
+global ZoomOut := "p"
 global CenterCursor := "q"
 global SpeedModifier := "Shift"
 
@@ -89,6 +91,10 @@ InitConfig() {
 	ScrollUp := tmp
 	IniRead, tmp, %IniFile%, Keys, ScrollDown, u
 	ScrollDown := tmp
+	IniRead, tmp, %IniFile%, Keys, ZoomIn, o
+	ZoomIn := tmp
+	IniRead, tmp, %IniFile%, Keys, ZoomOut, p
+	ZoomOut := tmp
 	IniRead, tmp, %IniFile%, Keys, CenterCursor, q
 	CenterCursor := tmp
 	IniRead, tmp, %IniFile%, Keys, SpeedModifier, Shift
@@ -145,6 +151,8 @@ SaveConfig() {
 	IniWrite, %MiddleClick%, %IniFile%, Keys, MiddleClick
 	IniWrite, %ScrollUp%, %IniFile%, Keys, ScrollUp
 	IniWrite, %ScrollDown%, %IniFile%, Keys, ScrollDown
+	IniWrite, %ZoomIn%, %IniFile%, Keys, ZoomIn
+	IniWrite, %ZoomOut%, %IniFile%, Keys, ZoomOut
 	IniWrite, %CenterCursor%, %IniFile%, Keys, CenterCursor
 	IniWrite, %SpeedModifier%, %IniFile%, Keys, SpeedModifier
 }
@@ -206,6 +214,15 @@ RegisterControllerHotkeys() {
 
 	hk := "*" . ScrollDown
 	Hotkey, %hk%, ScrollDownAction, On
+	RegisteredHotkeys.Push(hk)
+
+	; Zoom keys
+	hk := "*" . ZoomIn
+	Hotkey, %hk%, ZoomInAction, On
+	RegisteredHotkeys.Push(hk)
+
+	hk := "*" . ZoomOut
+	Hotkey, %hk%, ZoomOutAction, On
 	RegisteredHotkeys.Push(hk)
 
 	; Center cursor key

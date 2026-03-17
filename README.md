@@ -14,6 +14,8 @@ Control your mouse cursor entirely from the keyboard using vim-style keys. Toggl
 | S | Middle click (hold to drag) |
 | I | Scroll up |
 | U | Scroll down |
+| O | Zoom in (Ctrl+Scroll Up) |
+| P | Zoom out (Ctrl+Scroll Down) |
 
 When inactive, all letter keys pass through normally for typing.
 
@@ -26,7 +28,7 @@ A small green dot follows the cursor when the tool is active, so you always know
 Right-click the tray icon and select **Settings** to open the configuration GUI.
 
 ### Keys Tab
-Rebind any key: toggle hotkey (with modifier checkboxes), movement keys, click keys, scroll keys, and speed modifier.
+Rebind any key: toggle hotkey (with modifier checkboxes), movement keys, click keys, scroll/zoom keys, and speed modifier.
 
 ### Speed Tab
 - **Base Speed** - cursor movement speed (1-20)
