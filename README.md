@@ -16,6 +16,8 @@ Control your mouse cursor entirely from the keyboard using vim-style keys. Toggl
 | U | Scroll down |
 | O | Zoom in (Ctrl+Scroll Up) |
 | P | Zoom out (Ctrl+Scroll Down) |
+| Shift+O | Zoom in (Ctrl+Plus) |
+| Shift+P | Zoom out (Ctrl+Minus) |
 
 When inactive, all letter keys pass through normally for typing.
 

@@ -157,15 +157,29 @@ return
 ; ==================== Zoom Handlers ====================
 
 ZoomInAction:
-	Send {Ctrl Down}
-	MouseClick, WheelUp,,, 3
-	Send {Ctrl Up}
+	if (GetKeyState(SpeedModifier, "P"))
+	{
+		Send ^{+}
+	}
+	else
+	{
+		Send {Ctrl Down}
+		MouseClick, WheelUp,,, 3
+		Send {Ctrl Up}
+	}
 return
 
 ZoomOutAction:
-	Send {Ctrl Down}
-	MouseClick, WheelDown,,, 3
-	Send {Ctrl Up}
+	if (GetKeyState(SpeedModifier, "P"))
+	{
+		Send ^{-}
+	}
+	else
+	{
+		Send {Ctrl Down}
+		MouseClick, WheelDown,,, 3
+		Send {Ctrl Up}
+	}
 return
 
 ; ==================== Center Cursor Handler ====================
