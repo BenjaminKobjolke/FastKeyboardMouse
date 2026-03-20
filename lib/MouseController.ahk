@@ -163,9 +163,7 @@ ZoomInAction:
 	}
 	else
 	{
-		Send {Ctrl Down}
-		MouseClick, WheelUp,,, 3
-		Send {Ctrl Up}
+		Send {Ctrl Down}{WheelUp 3}{Ctrl Up}
 	}
 return
 
@@ -176,9 +174,7 @@ ZoomOutAction:
 	}
 	else
 	{
-		Send {Ctrl Down}
-		MouseClick, WheelDown,,, 3
-		Send {Ctrl Up}
+		Send {Ctrl Down}{WheelDown 3}{Ctrl Up}
 	}
 return
 
