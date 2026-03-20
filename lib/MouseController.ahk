@@ -154,27 +154,116 @@ ScrollDownAction:
 	MouseClick, WheelDown,,, 3
 return
 
+; ==================== Zoom Helpers ====================
+
+GetZoomMode(procName) {
+	global ZoomModeMemory, RememberZoomMode
+
+	if (!RememberZoomMode || procName = "")
+		return "wheel"
+
+	if (ZoomModeMemory.HasKey(procName))
+		return ZoomModeMemory[procName]
+
+	return "wheel"
+}
+
+SetZoomMode(procName, mode) {
+	global ZoomModeMemory, RememberZoomMode
+
+	if (!RememberZoomMode || procName = "")
+		return
+
+	ZoomModeMemory[procName] := mode
+	SaveZoomModes()
+}
+
+ShowZoomTooltip(mode, procName) {
+	if (mode = "keyboard")
+		tooltipText := "Zoom: Ctrl+/- for " . procName
+	else
+		tooltipText := "Zoom: Wheel for " . procName
+
+	ToolTip, %tooltipText%
+	SetTimer, ClearZoomTooltip, -2000
+}
+
+ClearZoomTooltip:
+	ToolTip
+return
+
+; ==================== Zoom Mode Toggle ====================
+
+ToggleZoomModeAction:
+	procName := LastIndicatorProcess
+	rememberedMode := GetZoomMode(procName)
+
+	if (rememberedMode = "wheel")
+		newMode := "keyboard"
+	else
+		newMode := "wheel"
+
+	SetZoomMode(procName, newMode)
+	ShowZoomTooltip(newMode, procName)
+	if (newMode = "wheel")
+		UpdateIndicatorColor(ZoomWheelColor)
+	else
+		UpdateIndicatorColor(IndicatorColor)
+return
+
 ; ==================== Zoom Handlers ====================
 
 ZoomInAction:
-	if (GetKeyState(SpeedModifier, "P"))
+	rememberedMode := GetZoomMode(LastIndicatorProcess)
+	shiftHeld := GetKeyState(SpeedModifier, "P")
+
+	; Shift temporarily flips the mode (no save)
+	if (shiftHeld)
 	{
-		Send ^{+}
+		if (rememberedMode = "wheel")
+			effectiveMode := "keyboard"
+		else
+			effectiveMode := "wheel"
 	}
 	else
 	{
-		Send {Ctrl Down}{WheelUp 3}{Ctrl Up}
+		effectiveMode := rememberedMode
+	}
+
+	if (effectiveMode = "keyboard")
+	{
+		SendInput ^{+}
+	}
+	else
+	{
+		SendInput {Ctrl Down}{WheelUp 3}{Ctrl Up}
 	}
 return
 
 ZoomOutAction:
-	if (GetKeyState(SpeedModifier, "P"))
+	rememberedMode := GetZoomMode(LastIndicatorProcess)
+	shiftHeld := GetKeyState(SpeedModifier, "P")
+
+	; Shift temporarily flips the mode (no save)
+	if (shiftHeld)
 	{
-		Send ^{-}
+		if (rememberedMode = "wheel")
+			effectiveMode := "keyboard"
+		else
+			effectiveMode := "wheel"
 	}
 	else
 	{
-		Send {Ctrl Down}{WheelDown 3}{Ctrl Up}
+		effectiveMode := rememberedMode
+	}
+
+	if (effectiveMode = "keyboard")
+	{
+		SendInput ^{-}
+	}
+	else
+	{
+		SendInput {Ctrl Down}{WheelDown 3}{Ctrl Up}
 	}
 return
 

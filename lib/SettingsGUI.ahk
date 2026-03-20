@@ -132,6 +132,13 @@ ShowSettings:
 	Gui, Settings:Add, Edit, x270 y%editY% w60 vEditZoomOut ReadOnly, %ZoomOut%
 	Gui, Settings:Add, Button, x335 y%btnY% w45 gSetZoomOut, Set
 
+	yPos += 35
+	Gui, Settings:Add, Text, x20 y%yPos% w80, Zoom Mode:
+	editY := yPos - 3
+	btnY := yPos - 4
+	Gui, Settings:Add, Edit, x80 y%editY% w60 vEditZoomModeToggle ReadOnly, %ZoomModeToggle%
+	Gui, Settings:Add, Button, x145 y%btnY% w45 gSetZoomModeToggle, Set
+
 	; --- Navigation Keys ---
 	yPos += 45
 	Gui, Settings:Add, Text, x20 y%yPos% w480 0x10  ; horizontal line
@@ -190,6 +197,14 @@ ShowSettings:
 
 	yPos += 40
 	Gui, Settings:Add, Checkbox, x20 y%yPos% vChkStartWithWindows Checked%StartWithWindows%, Start with Windows
+
+	yPos += 35
+	Gui, Settings:Add, Checkbox, x20 y%yPos% vChkRememberZoomMode Checked%RememberZoomMode%, Remember Zoom Mode Per App
+
+	yPos += 35
+	Gui, Settings:Add, Text, x20 y%yPos%, Wheel Zoom Indicator Color (hex):
+	editY := yPos - 3
+	Gui, Settings:Add, Edit, x250 y%editY% w100 vEditZoomWheelColor, %ZoomWheelColor%
 
 	; ==================== Theme Tab ====================
 	Gui, Settings:Tab, Theme
@@ -266,6 +281,10 @@ SetZoomOut:
 	CaptureKeyToControl("Settings", "EditZoomOut")
 return
 
+SetZoomModeToggle:
+	CaptureKeyToControl("Settings", "EditZoomModeToggle")
+return
+
 SetCenterCursor:
 	CaptureKeyToControl("Settings", "EditCenterCursor")
 return
@@ -301,6 +320,13 @@ SaveSettings:
 		return
 	}
 
+	; Validate zoom wheel color
+	if (!RegExMatch(EditZoomWheelColor, "^[0-9A-Fa-f]{6}$"))
+	{
+		MsgBox, 48, Keyboard Mouse, Zoom wheel indicator color must be a 6-digit hex value (e.g., 0066FF).
+		return
+	}
+
 	; Build toggle hotkey from checkboxes + key
 	builtToggleKey := BuildHotkey(ChkTglCtrl, ChkTglShift, ChkTglAlt, ChkTglWin, EditToggleKey)
 
@@ -317,6 +343,7 @@ SaveSettings:
 	ScrollDown := EditScrollDown
 	ZoomIn := EditZoomIn
 	ZoomOut := EditZoomOut
+	ZoomModeToggle := EditZoomModeToggle
 	CenterCursor := EditCenterCursor
 	SpeedModifier := DDLSpeedModifier
 
@@ -329,6 +356,8 @@ SaveSettings:
 
 	DarkMode := RadioDarkMode
 	StartWithWindows := ChkStartWithWindows
+	RememberZoomMode := ChkRememberZoomMode
+	ZoomWheelColor := EditZoomWheelColor
 
 	; Save to INI
 	SaveConfig()

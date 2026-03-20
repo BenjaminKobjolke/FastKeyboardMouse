@@ -15,6 +15,11 @@ global IndicatorOffsetX := 15
 global IndicatorOffsetY := 15
 global DoubleTapThreshold := 300
 global StartWithWindows := 0
+global RememberZoomMode := 1
+global ZoomWheelColor := "0066FF"
+global ZoomModesFile := ""
+global ZoomModeMemory := {}
+global LastIndicatorProcess := ""
 
 ; Key bindings
 global ToggleKey := "!q"
@@ -30,6 +35,7 @@ global ScrollDown := "u"
 global ZoomIn := "o"
 global ZoomOut := "p"
 global CenterCursor := "q"
+global ZoomModeToggle := "m"
 global SpeedModifier := "Shift"
 
 ; Runtime state
@@ -69,6 +75,10 @@ InitConfig() {
 	DoubleTapThreshold := tmp
 	IniRead, tmp, %IniFile%, Settings, StartWithWindows, 0
 	StartWithWindows := tmp
+	IniRead, tmp, %IniFile%, Settings, RememberZoomMode, 1
+	RememberZoomMode := tmp
+	IniRead, tmp, %IniFile%, Settings, ZoomWheelColor, 0066FF
+	ZoomWheelColor := tmp
 
 	; Read key bindings
 	IniRead, tmp, %IniFile%, Keys, ToggleKey, !q
@@ -97,6 +107,8 @@ InitConfig() {
 	ZoomOut := tmp
 	IniRead, tmp, %IniFile%, Keys, CenterCursor, q
 	CenterCursor := tmp
+	IniRead, tmp, %IniFile%, Keys, ZoomModeToggle, m
+	ZoomModeToggle := tmp
 	IniRead, tmp, %IniFile%, Keys, SpeedModifier, Shift
 	SpeedModifier := tmp
 
@@ -123,6 +135,10 @@ InitConfig() {
 		if (arg = "--gui" || arg = "-g")
 			ShowGuiOnStart := true
 	}
+
+	; Initialize zoom modes file and load persisted data
+	ZoomModesFile := A_ScriptDir . "\ZoomModes.ini"
+	LoadZoomModes()
 }
 
 SaveConfig() {
@@ -139,6 +155,8 @@ SaveConfig() {
 	IniWrite, %IndicatorOffsetY%, %IniFile%, Settings, IndicatorOffsetY
 	IniWrite, %DoubleTapThreshold%, %IniFile%, Settings, DoubleTapThreshold
 	IniWrite, %StartWithWindows%, %IniFile%, Settings, StartWithWindows
+	IniWrite, %RememberZoomMode%, %IniFile%, Settings, RememberZoomMode
+	IniWrite, %ZoomWheelColor%, %IniFile%, Settings, ZoomWheelColor
 
 	; Save key bindings
 	IniWrite, %ToggleKey%, %IniFile%, Keys, ToggleKey
@@ -154,7 +172,44 @@ SaveConfig() {
 	IniWrite, %ZoomIn%, %IniFile%, Keys, ZoomIn
 	IniWrite, %ZoomOut%, %IniFile%, Keys, ZoomOut
 	IniWrite, %CenterCursor%, %IniFile%, Keys, CenterCursor
+	IniWrite, %ZoomModeToggle%, %IniFile%, Keys, ZoomModeToggle
 	IniWrite, %SpeedModifier%, %IniFile%, Keys, SpeedModifier
+}
+
+LoadZoomModes() {
+	global ZoomModesFile, ZoomModeMemory
+	ZoomModeMemory := {}
+
+	if (!FileExist(ZoomModesFile))
+		return
+
+	IniRead, sectionContent, %ZoomModesFile%, ZoomModes
+	if (sectionContent = "ERROR" || sectionContent = "")
+		return
+
+	Loop, Parse, sectionContent, `n, `r
+	{
+		line := A_LoopField
+		eqPos := InStr(line, "=")
+		if (eqPos > 0)
+		{
+			procName := SubStr(line, 1, eqPos - 1)
+			mode := SubStr(line, eqPos + 1)
+			if (mode = "keyboard" || mode = "wheel")
+				ZoomModeMemory[procName] := mode
+		}
+	}
+}
+
+SaveZoomModes() {
+	global ZoomModesFile, ZoomModeMemory
+
+	FileDelete, %ZoomModesFile%
+
+	for procName, mode in ZoomModeMemory
+	{
+		IniWrite, %mode%, %ZoomModesFile%, ZoomModes, %procName%
+	}
 }
 
 RegisterToggleHotkey() {
@@ -223,6 +278,11 @@ RegisterControllerHotkeys() {
 
 	hk := "*" . ZoomOut
 	Hotkey, %hk%, ZoomOutAction, On
+	RegisteredHotkeys.Push(hk)
+
+	; Zoom mode toggle key
+	hk := "*" . ZoomModeToggle
+	Hotkey, %hk%, ToggleZoomModeAction, On
 	RegisteredHotkeys.Push(hk)
 
 	; Center cursor key

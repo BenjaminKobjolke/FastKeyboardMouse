@@ -21,8 +21,9 @@ CreateIndicator() {
 }
 
 ShowIndicator() {
-	global TimerInterval
+	global TimerInterval, LastIndicatorProcess
 	; Recreate indicator to ensure fresh window handle and AlwaysOnTop z-order
+	LastIndicatorProcess := ""
 	Gui, Indicator:Destroy
 	CreateIndicator()
 	Gui, Indicator:Show, NoActivate
@@ -39,10 +40,27 @@ DestroyIndicator() {
 	Gui, Indicator:Destroy
 }
 
+UpdateIndicatorColor(color) {
+	Gui, Indicator:Color, %color%
+}
+
 UpdateIndicatorPosition:
 	CoordMode, Mouse, Screen
 	MouseGetPos, mX, mY
 	newX := mX + IndicatorOffsetX
 	newY := mY + IndicatorOffsetY
 	Gui, Indicator:Show, x%newX% y%newY% NoActivate
+	WinGet, curProc, ProcessName, A
+	if (curProc != LastIndicatorProcess)
+	{
+		LastIndicatorProcess := curProc
+		if (RememberZoomMode)
+		{
+			mode := GetZoomMode(curProc)
+			if (mode = "wheel")
+				UpdateIndicatorColor(ZoomWheelColor)
+			else
+				UpdateIndicatorColor(IndicatorColor)
+		}
+	}
 return
